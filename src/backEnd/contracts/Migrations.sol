@@ -17,3 +17,5 @@ contract Migrations {
     last_completed_migration = completed;
   }
 }
+
+//Rinkeby address: 0xa43f8e754033325b5C341a6Ab2656F1cE6dbF6C0
