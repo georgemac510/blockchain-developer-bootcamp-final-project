@@ -19,11 +19,11 @@ export const contractSelector = createSelector(contract, c => c)
 const metadata = state => get(state, 'contract.metadata')
 export const metadataSelector = createSelector(metadata, m => m)
 
-const nftState = state => get(state, 'contract.state')
-export const nftStateSelector = createSelector(nftState, s => s)
+const legalDocState = state => get(state, 'contract.state')
+export const legalDocStateSelector = createSelector(legalDocState, s => s)
 
 const metadataLoaded= state => get(state, 'contract.loaded', false)
 export const metadataLoadedSelector = createSelector(metadataLoaded, l => l)
 
-const nftStateLoaded = state => get(state, 'contract.state', false)
-export const nftStateLoadedSelector = createSelector(nftStateLoaded, b => b)
+const legalDocStateLoaded = state => get(state, 'contract.state', false)
+export const legalDocStateLoadedSelector = createSelector(legalDocStateLoaded, b => b)

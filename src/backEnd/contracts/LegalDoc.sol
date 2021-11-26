@@ -46,4 +46,4 @@ contract LegalDoc is ERC721, Ownable {
 }
 
 
-// Rinkeby address: 0x5DC82A84a803bC5E14922106dc880F3a149c17cc
+// Rinkeby address: 0x238b18Dca39416DB904fEba866031316D533E3ED

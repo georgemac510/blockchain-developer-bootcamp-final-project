@@ -21,7 +21,7 @@ class Navbar extends Component {
           style={{color: "#55FF55", border: "1mm ridge #55FF55" }}
           rel="noopener noreferrer"
         >
-            <b>&nbsp;NFT Marketplace&nbsp;</b>
+            <b>&nbsp;Legal Doc Marketplace&nbsp;</b>
         </a>
           { this.props.account
           ? <div className="collapse navbar-collapse">

@@ -8,7 +8,7 @@ const fs = require('fs');
 module.exports = async function(callback) {
   try {
     let legalDocsData = [] //LegalDocs's database for front-end
-    const legalDoc = await legalDoc.deployed()
+    const legalDoc = await LegalDoc.deployed()
     const accounts = await web3.eth.getAccounts()
 
     console.log('\nUploading images on IPFS...')
@@ -23,12 +23,12 @@ module.exports = async function(callback) {
     for(let i=0; i<files.length; i++){
       let metadata = JSON.stringify({
         "name": `${/[^.]*/.exec(files[i])[0]}`,
-        "description": "D1g1t@l @rt - X, 24/2/21, ~DAPPU",
+        "description": "Legal Documents for Everyday Legal Needs",
         "image": `https://ipfs.io/ipfs/${upload.cid.toString()}/${files[i]}`
       }, null, '\t');
 
       var img = fs.readFileSync(`${__dirname}/gallery/${files[i]}`, {encoding: 'base64'});
-      nftsData.push(metadata.slice(0, -2) + `,\n\t"img": "${img}"` + `,\n\t"id": ${i+1}\n}`)
+      legalDocsData.push(metadata.slice(0, -2) + `,\n\t"img": "${img}"` + `,\n\t"id": ${i+1}\n}`)
 
       // nftsData.push(metadata.slice(0, -2) + `,\n\t"id": ${i+1}\n}`) //add metadata&id to nftsData
       await fs.writeFileSync(`${__dirname}/metadata/${/[^.]*/.exec(files[i])[0]}.json`, metadata)
@@ -41,15 +41,15 @@ module.exports = async function(callback) {
     console.log('\nMinting legalDocs...')
     for(let i=0; i<files.length; i++){
       await legalDoc.mint(`https://ipfs.io/ipfs/${upload.cid.toString()}/${files[i]}`, web3.utils.toWei('0.001', 'Ether'))
-      nftsData[i] = nftsData[i].slice(0, -2) + `,\n\t"price": ${await nft.price(i+1)},\n\t"uri": "${await nft.tokenURI(i+1)}"\n}` //add price&URI to nftsData
-      console.log(`\n${i+1} NFT is minted with URI:\n${await nft.tokenURI(i+1)}`)
+      legalDocsData[i] = legalDocsData[i].slice(0, -2) + `,\n\t"price": ${await legalDoc.price(i+1)},\n\t"uri": "${await legalDoc.tokenURI(i+1)}"\n}` //add price&URI to nftsData
+      console.log(`\n${i+1} LegalDoc is minted with URI:\n${await legalDoc.tokenURI(i+1)}`)
     }
 
     console.log('\nAggregating LegalDocs data...')
     if(fs.existsSync(`${__dirname}/legalDocsData.js`)) {
-      await fs.unlinkSync(`${__dirname}/nftsData.js`)
+      await fs.unlinkSync(`${__dirname}/legalDocsData.js`)
     }
-    await fs.writeFileSync(`${__dirname}/nftsData.js`, `export const legalDocsData = [${legalDocsData}]`)
+    await fs.writeFileSync(`${__dirname}/legalDocsData.js`, `export const legalDocsData = [${legalDocsData}]`)
 
     console.log('\n\nSuccess.')
   } catch(error) {

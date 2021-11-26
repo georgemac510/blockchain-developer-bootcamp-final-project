@@ -21,7 +21,7 @@ function contract(state = {}, action) {
       return { ...state, loaded: true, contract: action.contract }
     case 'METADATA_LOADED':
       return { ...state, loaded: true, metadata: action.metadata }
-    case 'NFT_STATE_LOADED':
+    case 'LEGALDOC_STATE_LOADED':
       return { ...state, loaded: true, state: action.state }
     default:
       return state

@@ -1,5 +1,5 @@
 import ReactTypingEffect from 'react-typing-effect';
-import { buyNft } from '../store/interactions'
+import { buyLegalDoc } from '../store/interactions'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Identicon from 'identicon.js';
@@ -7,10 +7,10 @@ import Loading from './Loading'
 import {
   contractSelector,
   metadataSelector,
-  nftStateSelector,
+  legalDocStateSelector,
   networkSelector,
   metadataLoadedSelector,
-  nftStateLoadedSelector
+  legalDocStateLoadedSelector
 } from '../store/selectors'
 
 class Main extends Component {
@@ -18,7 +18,7 @@ class Main extends Component {
     if(this.props.dataLoaded) {
         return (
           <div className="Main">
-            <div className="container-fluid mt-5" style={{ color: "#55FF55", "backgroundColor": "#1D1D1D" }}>
+            <div className="container-fluid mt-5" style={{ color: "#0000ff", "backgroundColor": "#1D1D1D" }}>
   
             <br></br>
             <div>
@@ -51,22 +51,22 @@ class Main extends Component {
               />
               </div>
               <br></br>&nbsp;
-              <img src={'https://i.gyazo.com/ed6df2ee521e82ae2498da1af3454c52.png'} style={{ width: '1000px', height: '300px' }} alt="adam"/>
+              <img src={'https://gateway.pinata.cloud/ipfs/QmRctamiB6GoQd9SRKfnoaoSe93DNo97iwyz3BaPB7EWYG'} style={{ width: '1000px', height: '300px' }} alt="adam"/>
               <div className="row">
                 <main role="main" className="col-lg-12 d-flex text-center">
                   <div className="content mr-auto ml-auto">
                     <div className="row justify-content-around" style={{ width: '1000px', fontSize: '13px'}}>
   
-                    {this.props.metadata.map((nft, key) => {
+                    {this.props.metadata.map((legalDoc, key) => {
                       return(
                         <div className="p-3" key={key}>
-                        {this.props.nftState[nft.id]
-                          ? <a href={nft.image} target="_blank" rel="noopener noreferrer">
-                              <img src={`data:image/png;base64,${nft.img}`} style={{ border: '1mm ridge #8B8B8B', width: '200px', height: '300px' }} alt="art"/>
+                        {this.props.legalDocState[legalDoc.id]
+                          ? <a href={legalDoc.image} target="_blank" rel="noopener noreferrer">
+                              <img src={`data:image/png;base64,${legalDoc.img}`} style={{ border: '1mm ridge #8B8B8B', width: '200px', height: '300px' }} alt="art"/>
                             </a>
-                          : <a href={nft.image} target="_blank" rel="noopener noreferrer">
+                          : <a href={legalDoc.image} target="_blank" rel="noopener noreferrer">
                               <img
-                                src={`data:image/png;base64,${nft.img}`} style={{ border: '1mm ridge #55FF55', width: '200px', height: '300px' }} alt="art"
+                                src={`data:image/png;base64,${legalDoc.img}`} style={{ border: '1mm ridge #55FF55', width: '200px', height: '300px' }} alt="art"
                               />
                             </a>
                         }
@@ -75,19 +75,19 @@ class Main extends Component {
                             <thead>
                               <tr>
                                 <th className="text-left" style={{color: "#8B8B8B"}}>ID: </th>
-                                <th style={{color: "#FFFFFF"}}>{nft.id}</th>
+                                <th style={{color: "#FFFFFF"}}>{legalDoc.id}</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th className="text-left" style={{color: "#8B8B8B"}}>URI: </th>
                                 <td>
-                                  <a href={nft.uri} target="_blank" rel="noopener noreferrer" style={{color: "#55FF55"}}>
+                                  <a href={legalDoc.uri} target="_blank" rel="noopener noreferrer" style={{color: "#55FF55"}}>
                                     link
                                   </a>
                                 </td>
                               </tr>
-                              {this.props.nftState[nft.id]
+                              {this.props.legalDocState[legalDoc.id]
                               ? <tr>
                                   <th className="text-left" style={{color: "#8B8B8B"}}>Owner:</th>
                                   <th>
@@ -96,31 +96,31 @@ class Main extends Component {
                                       className="ml-2 id border border-success"
                                       width="15"
                                       height="15"
-                                      src={`data:image/png;base64,${new Identicon(this.props.nftState[nft.id], 30).toString()}`}
+                                      src={`data:image/png;base64,${new Identicon(this.props.legalDocState[legalDoc.id], 30).toString()}`}
                                     />{' '}
                                     <a
-                                      href={`https://etherscan.io/address/` + this.props.nftState[nft.id]}
+                                      href={`https://etherscan.io/address/` + this.props.legalDocState[legalDoc.id]}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       style={{color: "#55FF55", "fontWeight": "normal"}}
                                     >
-                                      {this.props.nftState[nft.id].substring(0,8) + '...'}
+                                      {this.props.legalDocState[legalDoc.id].substring(0,8) + '...'}
                                     </a>
                                   </th>
                                 </tr>
                               : <tr>
                                   <th className="text-left" style={{color: "#8B8B8B"}}>Price: </th>
-                                  <th style={{color: "#FFFFFF"}}>{nft.price/10**18} ETH</th>
+                                  <th style={{color: "#FFFFFF"}}>{legalDoc.price/10**18} ETH</th>
                                 </tr>
                               }
                             </tbody>
                           </table><p></p>
-                            {this.props.nftState[nft.id]
+                            {this.props.legalDocState[legalDoc.id]
                               ? <button
                                   type="Success"
                                   className="btn btn-block"
                                   style={{border: '1px ridge #8B8B8B', color: "#8B8B8B", width: '200px'}}
-                                  onClick={(e) => buyNft(this.props.dispatch, nft.id, nft.price)}
+                                  onClick={(e) => buyLegalDoc(this.props.dispatch, legalDoc.id, legalDoc.price)}
                                   disabled
                                 >
                                   <b>S o l d</b>
@@ -129,7 +129,7 @@ class Main extends Component {
                                   type="Success"
                                   className="btn btn-block btn-outline"
                                   style={{border: '1px ridge #55FF55', color: "#55FF55", width: '200px'}}
-                                  onClick={(e) => buyNft(this.props.dispatch, nft.id, nft.price)}
+                                  onClick={(e) => buyLegalDoc(this.props.dispatch, legalDoc.id, legalDoc.price)}
                                 >
                                   <b>B u y</b>
                                 </button>
@@ -147,7 +147,7 @@ class Main extends Component {
             <footer>
             {this.props.contract
               ? <div style={{color: "#8B8B8B", fontSize: "14px"}}>
-                  NFT deployed at:&nbsp;
+                  Legal Doc deployed at:&nbsp;
                   <a
                     href={`https://${this.props.network}.etherscan.io/address/` + this.props.contract._address}
                     target="_blank"
@@ -171,11 +171,11 @@ class Main extends Component {
 }
 
 function mapStateToProps(state) {
-  const dataLoaded = metadataLoadedSelector(state) && nftStateLoadedSelector(state)
+  const dataLoaded = metadataLoadedSelector(state) && legalDocStateLoadedSelector(state)
   return {
     metadata: metadataSelector(state),
     contract: contractSelector(state),
-    nftState: nftStateSelector(state),
+    legalDocState: legalDocStateSelector(state),
     network: networkSelector(state),
     dataLoaded
   }

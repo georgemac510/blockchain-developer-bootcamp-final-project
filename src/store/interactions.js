@@ -1,5 +1,5 @@
-import { nftsData } from '../backEnd/scripts/nftsData.js'
-import Contract from '../backEnd/abis/NFT.json'
+import { legalDocsData } from '../backEnd/scripts/legalDocsData.js'
+import Contract from '../backEnd/abis/LegalDoc.json'
 import Web3 from 'web3'
 import {
   web3Loaded,
@@ -8,7 +8,7 @@ import {
   web3AccountLoaded,
   web3BalanceLoaded,
   metadataLoaded,
-  nftStateLoaded
+  legalDocStateLoaded
 } from './actions'
 
 export const loadWeb3 = async (dispatch) => {
@@ -84,8 +84,8 @@ export const update = async (dispatch) => {
     netId = await web3.eth.net.getId()
     contract = await loadContract(dispatch, web3, netId)
   
-    await loadNftData(dispatch, contract)
-    await loadNftState(dispatch, contract)
+    await loadLegalDocsData(dispatch, contract)
+    await loadLegalDocState(dispatch, contract)
     if(account && contract){
       await loadBalance(dispatch, web3, account)
     }
@@ -95,7 +95,7 @@ export const update = async (dispatch) => {
 }
 
 //get NFTs data from nftsData.js generated while minting
-export const loadNftData = async (dispatch, contract) => {
+export const loadLegalDocsData = async (dispatch, contract) => {
   try{
     const totalSupply = await contract.methods.totalSupply().call()
     const uri = await contract.methods.tokenURI(1).call()
@@ -103,18 +103,18 @@ export const loadNftData = async (dispatch, contract) => {
     fetch(uri)
       .then(res => res.json())
       .then(result => {
-        if(result.image===nftsData[0].image || Number(totalSupply)===nftsData.length){
-          dispatch(metadataLoaded(nftsData))
+        if(result.image===legalDocsData[0].image || Number(totalSupply)===legalDocsData.length){
+          dispatch(metadataLoaded(legalDocsData))
         }
       });
-      console.log(nftsData)
+      console.log(legalDocsData)
   } catch (e) {
     console.log('Error, load images', e)
   }
 }
 
 //get data about NFT's sold state
-export const loadNftState = async (dispatch, contract) => {
+export const loadLegalDocState = async (dispatch, contract) => {
   try{
     const tab = []
     const totalSupply = await contract.methods.totalSupply().call()
@@ -127,13 +127,13 @@ export const loadNftState = async (dispatch, contract) => {
         tab.push(state)
       }
     }
-    dispatch(nftStateLoaded(tab))
+    dispatch(legalDocStateLoaded(tab))
   } catch (e) {
-    console.log('Error, load NFT state', e)
+    console.log('Error, load LegalDoc state', e)
   }
 }
 
-export const buyNft = async (dispatch, id, price) => {
+export const buyLegalDoc = async (dispatch, id, price) => {
   try{
     const web3 = await loadWeb3(dispatch)
     await loadNetwork(dispatch, web3)
@@ -144,14 +144,14 @@ export const buyNft = async (dispatch, id, price) => {
     await contract.methods.buy(id).send({from: account, value: price})
       .on('receipt', async (r) => {
         update(dispatch)
-        window.alert(`Congratulations, you've received NFT with ID: ${id}\nAddress: ${Contract.networks[netId].address}`)
+        window.alert(`Congratulations, you've received Legal Doc with ID: ${id}\nAddress: ${Contract.networks[netId].address}`)
       })
       .on('error',(error) => {
         console.error(error)
         window.alert(`There was an error!`)
       })
   } catch (e){
-    console.log('Error, buy NFT', e)
+    console.log('Error, buy Legal Doc', e)
   }
   
 }
