@@ -66,7 +66,7 @@ class Main extends Component {
                             </a>
                           : <a href={legalDoc.image} target="_blank" rel="noopener noreferrer">
                               <img
-                                src={`data:image/png;base64,${legalDoc.img}`} style={{ border: '1mm ridge #55FF55', width: '200px', height: '300px' }} alt="art"
+                                src={`data:image/png;base64,${legalDoc.img}`} style={{ border: '1mm ridge #0000ff', width: '200px', height: '300px' }} alt="art"
                               />
                             </a>
                         }
@@ -82,7 +82,7 @@ class Main extends Component {
                               <tr>
                                 <th className="text-left" style={{color: "#8B8B8B"}}>URI: </th>
                                 <td>
-                                  <a href={legalDoc.uri} target="_blank" rel="noopener noreferrer" style={{color: "#55FF55"}}>
+                                  <a href={legalDoc.uri} target="_blank" rel="noopener noreferrer" style={{color: "#0000ff"}}>
                                     link
                                   </a>
                                 </td>

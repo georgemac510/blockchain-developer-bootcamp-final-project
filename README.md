@@ -8,5 +8,5 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
 TO DO LIST:
 1) Update .css and improve colors/visual aesthetics
 2) Update README.md
-3) Deploy website on Render or Surge?
+3) Deploy website on Render or Surge?  DONE https://legaldoc.surge.sh/
 4) Prep for video/screencast
