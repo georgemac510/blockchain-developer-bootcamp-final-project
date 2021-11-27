@@ -29,7 +29,7 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
         $ npm install -g ganache-cli
         $ ganache-cli
 
-    Make sure that port 8545 is listed in truffle-config.js for ganache-cli
+    `ganache-cli` will now be running a development blockchain on port `8545` and give you 10 development network accounts with    addresses and corresponding private keys which can be imported to Metamask each with 100 ETH for gas and testing.  Make sure that port `8545` is listed in truffle-config.js for `ganache-cli`.
 
 4. Install and run IPFS if not installed
 
@@ -51,7 +51,12 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
         $ cd blockchain-developer-bootcamp-final-project/
         $ yarn install
 
-7. Compile, migrate and test contracts on development network. Make sure `truffle-config.js` is properly configured.
+7. Create an `.env` file to hold your Metamask private key and Infura ID. Add those two pieces of data with no "'s or other symbols such as below:
+
+        PRIVATE_KEYS=0000001111111122222233333aaaabbbbccccdddd
+        INFURA_ID=987654321abcdefghifklmnopqrst
+
+8. Compile, migrate and test contracts on development network. Make sure `truffle-config.js` is properly configured.
 
         Compile and migrate
         $ truffle compile
@@ -59,25 +64,25 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
         Test
         $ truffle test
 
-8. Interact with deployed contract and mint tokens. Make sure `jsipfs daemon` is running in another terminal.
+9. Interact with deployed contract and mint tokens. Make sure `jsipfs daemon` is running in another terminal.
 
         $ truffle exec src/backEnd/scripts/mint.js --network ganache_cli
 
-9. Run app on `localhost:3000`
+10. Run app on `localhost:3000`
 
         $ yarn start
 
     App should open up on `localhost:3000`
 
-10. Buying legal docs on app
+11. Buying legal docs on app
 
     a. Make sure that you are logged on to Metamask, your network is set to `Localhost 8545` and connected to `localhost:3000`
 
     b. Fund your Metamask account by grabbing the first private key from `ganache-cli` and import it. Now you have ETH for purchases.
-    
+
     c. Under your chosen legal doc image, click the `Buy` button, confirm the purchase on the Metamask pop up window. You are now the proud owner of a legal doc to meet your needs.
 
-11. Ethereum Rinkeby testnet deployment. make sure that `truffle-config.js` is properly configured for the Rinkeby network.
+12. Ethereum Rinkeby testnet deployment. make sure that `truffle-config.js` is properly configured for the Rinkeby network.
 
     a. Switch Metamask network to Rinkeby with a funded Rinkeby ETH account.
     b. Migrate contracts for Rinkeby and mint tokens.
