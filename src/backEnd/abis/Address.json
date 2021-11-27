@@ -1,9 +1,9 @@
 {
   "contractName": "Address",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Collection of functions related to the address type\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/Address.sol\":\"Address\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]}},\"version\":1}",
-  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207d72d881407f186b791539e56281a78442c822820be97773fc725e49b945006564736f6c63430007060033",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207d72d881407f186b791539e56281a78442c822820be97773fc725e49b945006564736f6c63430007060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.4+commit.3f05b770\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Collection of functions related to the address type\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/Address.sol\":\"Address\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220ffaa3b8bd6b6b64267efc2cddc44ef96bff52170a146421fb005d7e8eb3e64db64736f6c63430007040033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220ffaa3b8bd6b6b64267efc2cddc44ef96bff52170a146421fb005d7e8eb3e64db64736f6c63430007040033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
@@ -318,7 +318,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4294967268,
+                                "referencedDeclaration": -28,
                                 "src": "2153:4:9",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_Address_$1964",
@@ -432,10 +432,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "2137:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -648,10 +648,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "2362:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1510,7 +1510,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4294967268,
+                                "referencedDeclaration": -28,
                                 "src": "4775:4:9",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_Address_$1964",
@@ -1624,10 +1624,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "4759:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1736,10 +1736,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "4850:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2478,10 +2478,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "5827:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3158,10 +3158,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
+                        -18,
+                        -18
                       ],
-                      "referencedDeclaration": 4294967278,
+                      "referencedDeclaration": -18,
                       "src": "6803:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3654,10 +3654,10 @@
                                   "name": "revert",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [
-                                    4294967277,
-                                    4294967277
+                                    -19,
+                                    -19
                                   ],
-                                  "referencedDeclaration": 4294967277,
+                                  "referencedDeclaration": -19,
                                   "src": "7765:6:9",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
@@ -4367,10 +4367,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -4450,7 +4450,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 4294967268,
+                                          "referencedDeclaration": -28,
                                           "type": "library Address",
                                           "value": "this"
                                         },
@@ -4685,10 +4685,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -5711,10 +5711,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -5794,7 +5794,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 4294967268,
+                                          "referencedDeclaration": -28,
                                           "type": "library Address",
                                           "value": "this"
                                         },
@@ -5885,10 +5885,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -6648,10 +6648,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -7375,10 +7375,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4294967278,
-                                4294967278
+                                -18,
+                                -18
                               ],
-                              "referencedDeclaration": 4294967278,
+                              "referencedDeclaration": -18,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -8008,10 +8008,10 @@
                                                 }
                                               ],
                                               "overloadedDeclarations": [
-                                                4294967277,
-                                                4294967277
+                                                -19,
+                                                -19
                                               ],
-                                              "referencedDeclaration": 4294967277,
+                                              "referencedDeclaration": -19,
                                               "type": "function (string memory) pure",
                                               "value": "revert"
                                             },
@@ -8084,11 +8084,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+    "version": "0.7.4+commit.3f05b770.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-21T21:42:11.760Z",
+  "updatedAt": "2021-11-27T18:47:24.642Z",
   "devdoc": {
     "details": "Collection of functions related to the address type",
     "kind": "dev",

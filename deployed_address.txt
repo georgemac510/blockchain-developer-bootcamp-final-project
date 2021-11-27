@@ -1,3 +1,3 @@
 testnet: Rinkeby
-contract address: 0x238b18Dca39416DB904fEba866031316D533E3ED
-rinkeby.etherscan.io URL: https://rinkeby.etherscan.io/address/0x238b18dca39416db904feba866031316d533e3ed
+contract address: 0x3A939398302fD3Eee8Ca9C9984953a7F467e68CA
+rinkeby.etherscan.io URL: https://rinkeby.etherscan.io/address/0x3A939398302fD3Eee8Ca9C9984953a7F467e68CA

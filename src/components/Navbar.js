@@ -18,7 +18,7 @@ class Navbar extends Component {
           className="navbar-brand rounded"
           target="_blank"
           href="https://github.com/xternet/dapp_template_v2"
-          style={{color: "#0000ff", border: "1mm ridge #0000ff" }}
+          style={{color: "#ffffff", border: "1mm ridge #0000ff" }}
           rel="noopener noreferrer"
         >
             <b>&nbsp;Legal Doc Marketplace&nbsp;</b>

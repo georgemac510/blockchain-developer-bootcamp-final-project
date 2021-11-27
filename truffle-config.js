@@ -47,7 +47,7 @@ module.exports = {
   test_directory: './src/backEnd/test/',
   compilers: {
     solc: {
-      version: ">=0.6.0 <0.8.0",
+      version: "0.7.4",
       optimizer: {
         enabled: true,
         runs: 200

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity 0.7.4;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -46,4 +46,4 @@ contract LegalDoc is ERC721, Ownable {
 }
 
 
-// Rinkeby address: 0x238b18Dca39416DB904fEba866031316D533E3ED
+// Rinkeby address: 0x3A939398302fD3Eee8Ca9C9984953a7F467e68CA
