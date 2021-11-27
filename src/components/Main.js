@@ -18,7 +18,7 @@ class Main extends Component {
     if(this.props.dataLoaded) {
         return (
           <div className="Main">
-            <div className="container-fluid mt-5" style={{ color: "#0000ff", "backgroundColor": "#1D1D1D" }}>
+            <div className="container-fluid mt-5" style={{ color: "#ffffff", "backgroundColor": "#707070" }}>
   
             <br></br>
             <div>
