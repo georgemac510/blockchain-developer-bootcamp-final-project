@@ -72,7 +72,9 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
 10. Buying legal docs on app
 
     a. Make sure that you are logged on to Metamask, your network is set to `Localhost 8545` and connected to `localhost:3000`
+
     b. Fund your Metamask account by grabbing the first private key from `ganache-cli` and import it. Now you have ETH for purchases.
+    
     c. Under your chosen legal doc image, click the `Buy` button, confirm the purchase on the Metamask pop up window. You are now the proud owner of a legal doc to meet your needs.
 
 11. Ethereum Rinkeby testnet deployment. make sure that `truffle-config.js` is properly configured for the Rinkeby network.
