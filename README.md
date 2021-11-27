@@ -92,7 +92,7 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
 
     c. Verify deployment at https://rinkeby.etherscan.io/ by searching your new contract address and checking under `Erc721 Token Txns` to see the minted tokens.
 
-The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.surge.sh/. The address of the deployed contract is at the bottom of the website page.
+The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.surge.sh/. The address of the deployed contract is at the bottom of the website page. Left-clicking on the contract address at the bottom of the web page will bring you to the rinkeby.etherscan.io page for the contract.
 
 
 
