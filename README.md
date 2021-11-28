@@ -108,6 +108,7 @@ Legal Documents Marketplace
 12. Ethereum Rinkeby testnet deployment. make sure that `truffle-config.js` is properly configured for the Rinkeby network.
 
     a. Switch Metamask network to Rinkeby with a funded Rinkeby ETH account.
+    
     b. Migrate contracts for Rinkeby and mint tokens.
 
         $ truffle migrate --network rinkeby
