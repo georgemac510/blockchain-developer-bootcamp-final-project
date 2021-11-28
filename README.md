@@ -7,6 +7,29 @@ This is my final project submission for the Consensys Academy Bootcamp 2021.
 
 The Legal Document Form Repository will be a datastore and marketplace to purchase common filable-PDF legal documents such as a simple will, articles of incorporation for specific states or provinces, bill of sale sample, building contract, business plan, etc. Currently, the legal documents are stored as .jpg files, but in future iterations, the documents will be filable-PDFs so that the user can use it for their own purposes and fill them with their own unique information. The legal documents are stored on IPFS and deployed to the Rinkeby Ethereum testnet as ERC721 NFTs. A live demo can be found at: https://legaldoc.surge.sh/ .
 
+# Folder and Directory Structure
+
+Legal Documents Marketplace
+  - .vscode
+  - build
+  - node_modules
+  - public
+    * index.html
+  - src
+    - backEnd
+      - abis
+      - contracts
+      - migrations
+      - scripts
+      - test
+    - components
+    - images
+    - store
+    * index.js
+    * .env.example
+    * truffle-config.js
+    * yarn.lock
+
 
 # Prerequisites
 
@@ -14,8 +37,8 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
 
         $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
         $ source ~/.nvm/nvm.sh
-        $ nvm install 14.16.0 
-        $ nvm alias default 14.16.0 
+        $ nvm install 14.16.0
+        $ nvm alias default 14.16.0
         $ nvm use default
 
 2. Install truffle if not installed
@@ -92,15 +115,6 @@ The Legal Document Form Repository will be a datastore and marketplace to purcha
 
     c. Verify deployment at https://rinkeby.etherscan.io/ by searching your new contract address and checking under `Erc721 Token Txns` to see the minted tokens.
 
-The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.surge.sh/. The address of the deployed contract is at the bottom of the website page. Left-clicking on the contract address at the bottom of the web page will bring you to the rinkeby.etherscan.io page for the contract.
+The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.surge.sh/ using Surge. The address of the deployed contract is at the bottom of the website page. Left-clicking on the contract address at the bottom of the web page will bring you to the rinkeby.etherscan.io page for the contract.
 
-
-
-
-
-
-
-
-
-
-    
+If I am eligible for a Consensys Academy certification, can you please send the certification NFT to mainnet address: 0xf0a345115815bc2C87B0EBE49DF8773a71A49063
