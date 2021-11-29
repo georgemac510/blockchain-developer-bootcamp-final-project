@@ -116,6 +116,13 @@ Legal Documents Marketplace
 
     c. Verify deployment at https://rinkeby.etherscan.io/ by searching your new contract address and checking under `Erc721 Token Txns` to see the minted tokens.
 
+# Live Demo URL
 The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.surge.sh/ using Surge. The address of the deployed contract is at the bottom of the website page. Left-clicking on the contract address at the bottom of the web page will bring you to the rinkeby.etherscan.io page for the contract.
+
+# Project Demo Video
+
+LINK TO YOUTUBE VIDEO HERE
+
+Please find a link to the short Canva slideshow used for the video submission at: https://www.canva.com/design/DAEvEjCAUgc/861G5VYuJ1ZaigA6KiyzyQ/view?utm_content=DAEvEjCAUgc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
 If I am eligible for a Consensys Academy certification, can you please send the certification NFT to mainnet address: 0xf0a345115815bc2C87B0EBE49DF8773a71A49063
