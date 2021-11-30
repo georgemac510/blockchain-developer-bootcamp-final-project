@@ -121,8 +121,8 @@ The demo was deployed as a website to the Rinkeby testnet at https://legaldoc.su
 
 # Project Demo Video
 
-LINK TO YOUTUBE VIDEO HERE
+The following Youtube link will bring you to my final project demo video: https://youtu.be/v6fsca4TRFc
 
 Please find a link to the short Canva slideshow used for the video submission at: https://www.canva.com/design/DAEvEjCAUgc/861G5VYuJ1ZaigA6KiyzyQ/view?utm_content=DAEvEjCAUgc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
-If I am eligible for a Consensys Academy certification, can you please send the certification NFT to mainnet address: 0xf0a345115815bc2C87B0EBE49DF8773a71A49063
+<h5>If I am eligible for a Consensys Academy certification, can you please send the certification NFT to mainnet address: 0xf0a345115815bc2C87B0EBE49DF8773a71A49063 </h5>
