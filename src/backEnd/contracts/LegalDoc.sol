@@ -63,3 +63,4 @@ contract LegalDoc is ERC721, Ownable {
 
 
 /// Rinkeby address: 0x3A939398302fD3Eee8Ca9C9984953a7F467e68CA
+/// Bring contract >= 0.8.0 https://ethereum.stackexchange.com/questions/93917/function-settokenuri-in-erc721-is-gone-in-openzeppelin-0-8-0-contracts
