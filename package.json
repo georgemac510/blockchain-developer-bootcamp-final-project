@@ -6,7 +6,7 @@
   "homepage": ".",
   "dependencies": {
     "@openzeppelin/contracts": "3.4.0",
-    "@openzeppelin/test-helpers": "0.5.10",
+    "@openzeppelin/test-helpers": "0.5.15",
     "@truffle/hdwallet-provider": "^1.4.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
