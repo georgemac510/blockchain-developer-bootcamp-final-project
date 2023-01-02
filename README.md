@@ -111,8 +111,8 @@ Legal Documents Marketplace
     
     b. Migrate contracts for Rinkeby and mint tokens.
 
-        $ truffle migrate --network rinkeby
-        $ truffle exec src/backEnd/scripts/mint.js --network rinkeby
+        $ truffle migrate --network goerli
+        $ truffle exec src/backEnd/scripts/mint.js --network goerli
 
     c. Verify deployment at https://rinkeby.etherscan.io/ by searching your new contract address and checking under `Erc721 Token Txns` to see the minted tokens.
 
