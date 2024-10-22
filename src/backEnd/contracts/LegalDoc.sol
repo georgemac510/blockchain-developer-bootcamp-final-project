@@ -62,4 +62,4 @@ contract LegalDoc is ERC721, Ownable {
 }
 
 
-/// Rinkeby address: 0x3A939398302fD3Eee8Ca9C9984953a7F467e68CA
+// Sepolia deployment - 10-22-2024: https://sepolia.etherscan.io/address/0xab9DCd5b7Da046E8C9c7a49bEFC1B617d86d91E5S
